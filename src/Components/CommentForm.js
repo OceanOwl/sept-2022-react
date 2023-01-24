@@ -5,16 +5,18 @@ import {commentService} from "../Services";
 import {CommentValidator} from "../Validators/CommentValidator";
 
 const CommentForm = ({setComments}) => {
+
+
     const {register, handleSubmit, reset, formState: {errors, isValid}, setValue} = useForm({
         mode: 'all',
         resolver:joiResolver(CommentValidator)
     })
 
+
     const submit = (newComment) => {
         const {data} = commentService.create(newComment)
         setComments(previous=>[...previous,data])
         reset()
-
     }
 
 
