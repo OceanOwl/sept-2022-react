@@ -2,14 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {userService} from "../Api";
 import {User} from "./User";
 
-const Users = () => {
-    const [users, setUsers] = useState([]);
-
-
-    useEffect(()=>{
-        userService.getAll().then(({data})=>setUsers([...data]))
-
-    },[])
+const Users = ({users}) => {
 
     return (
         <div>
