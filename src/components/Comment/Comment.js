@@ -1,9 +1,11 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 const Comment = ({comment}) => {
+    const navigate = useNavigate();
 
-const {postId,id,email,body}=comment
+
+    const {postId, id, email, body} = comment
 
     return (
         <div>
@@ -11,7 +13,7 @@ const {postId,id,email,body}=comment
             <div>id:{id}</div>
             <div>email:{email}</div>
             <div>body:{body}</div>
-            <Link to={postId.toString()}>Show current post</Link>
+            <button onClick={() => navigate(postId.toString())}>Show current post</button>
         </div>
     );
 };

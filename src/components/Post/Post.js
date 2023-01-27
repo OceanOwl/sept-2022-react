@@ -1,17 +1,29 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import {postsService} from "../../services";
 
-const Post = ({post}) => {
-    const {userId,id,title,body}=post
+const Post = ({id}) => {
+
+
+
+    const [post, setPost] = useState(null);
+
+
+    useEffect(() => {
+        postsService.getById(id).then(({data}) => setPost(data))
+    }, [id])
+
 
 
     return (
         <div>
-            <div>userId:{userId}</div>
-            <div>id:{id}</div>
-            <div>title:{title}</div>
-            <div>body:{body}</div>
+            {post &&
+                <>
+                    <div>id:{post.id}</div>
+
+                    <div>title:{post.title}</div>
+                </>
+            }
         </div>
     );
 };
-
 export {Post};

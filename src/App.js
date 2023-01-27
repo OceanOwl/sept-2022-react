@@ -13,8 +13,8 @@ const App = () => {
                     <Route path={'todos'} element={<TodosPage/>}/>
                     <Route path={'albums'} element={<AlbumsPage/>}/>
                     <Route path={'comments'} element={<CommentsPage/>}>
-                    <Route path={':postId'} element={<PostsPage/>}/>
-                </Route>
+                        <Route path={':id'} element={<PostsPage/>}/>
+                    </Route>
                     <Route path={'*'} element={<NotFoundPage/>}/>
                 </Route>
             </Routes>
