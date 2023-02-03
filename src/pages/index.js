@@ -1,0 +1,5 @@
+export * from './PostsPage/PostsPage'
+export * from './HomePage/HomePage'
+export * from './CatsAndDogsPage/CatsAndDogsPage'
+export * from './NotFoundPage/NotFoundPage'
+export * from './CommentsPage/CommentsPage'
