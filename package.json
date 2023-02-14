@@ -1,0 +1,23 @@
+{
+  "name": "sept-2022-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OceanOwl/sept-2022-react.git"
+  },
+  "dependencies": {
+    "typescript": "^4.9.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OceanOwl/sept-2022-react/issues"
+  },
+  "homepage": "https://github.com/OceanOwl/sept-2022-react#readme"
+}
